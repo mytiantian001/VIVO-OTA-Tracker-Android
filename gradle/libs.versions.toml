@@ -20,7 +20,7 @@ protobuf = "0.10.0"
 protobuf-kotlin-lite = "4.29.1"
 commons-compress = "1.27.1"
 xz = "1.10"
-okhttp = "4.12.0"
+okhttp = "5.4.0"
 
 [libraries]
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity-compose" }
