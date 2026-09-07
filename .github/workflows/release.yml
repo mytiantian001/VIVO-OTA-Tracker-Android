@@ -40,10 +40,10 @@ jobs:
             --install "platform-tools" "platforms;android-37.0" "build-tools;37.0.0"
 
       - name: Validate Gradle Wrapper
-        uses: gradle/actions/wrapper-validation@v4
+        uses: gradle/actions/wrapper-validation@v6
 
       - name: Set up Gradle (with cache)
-        uses: gradle/actions/setup-gradle@v4
+        uses: gradle/actions/setup-gradle@v6
 
       - name: Decode signing keystore
         env:
