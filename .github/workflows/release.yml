@@ -65,7 +65,7 @@ jobs:
         run: ./gradlew :app:android:assembleRelease --stacktrace
 
       - name: Upload APK artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: vivo-ota-tracker-release-apk
           path: app/android/build/outputs/apk/release/*.apk
