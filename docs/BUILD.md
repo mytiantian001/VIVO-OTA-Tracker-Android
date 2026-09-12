@@ -59,10 +59,10 @@
 ## 4. 本机实测结果
 
 - 环境：Windows / PowerShell 7 / Gradle 9.6.1（通过 `./gradlew`）。
-- 改动 `ProjectConfig.VERSION_NAME = "1.3.1"` 后，
-  `clean + assembleDebug` 构建成功，产物：
-  `vivo OTA Tracker-v1.3.1(6)-debug.apk`。
-- 一次完整 Debug 构建耗时约 3 分钟（首次/clean 后）。
+- 改动 `ProjectConfig.VERSION_NAME = "1.4.0"` 后，
+  `installDebug` 构建成功，产物：
+  `vivo OTA Tracker-v1.4.0(12)-debug.apk`（versionCode=12，对应 git commit 数）。
+- 一次完整 Debug 构建耗时约 3-4 分钟（首次/clean 后）。
 
 ## 5. 全新环境搭建踩坑（Windows 实测）
 
@@ -125,7 +125,7 @@
 
 ## 6. 升级版本的标准流程
 
-1. 改 `buildSrc/src/main/kotlin/ProjectConfig.kt` 的 `VERSION_NAME`。
+1. 改 `buildSrc/src/main/kotlin/ProjectConfig.kt` 的 `VERSION_NAME`（当前 `1.4.0`）。
 2. （可选）`git commit` 会让 versionCode 自动 +1。
 3. `./gradlew :app:android:clean :app:android:assembleDebug` 重新构建。
 4. 应用内关于页会自动显示新版本（通过 `BuildConfig.APP_VERSION_NAME`）。
@@ -176,7 +176,8 @@ KEY_PASSWORD=VivoOta@2026
 4. 产物：`app/android/build/outputs/apk/release/vivo OTA Tracker-vX.Y.Z(N)-release.apk`
 
 ### 实测结果
-- 本机 `BUILD SUCCESSFUL in 3m 20s`，`versionCode=9`（git commit 数）。
+- 本机 `BUILD SUCCESSFUL in 3m 20s`，`versionCode=9`（git commit 数，release 示例）。
+- 同配置打 debug：`BUILD SUCCESSFUL in 3m 47s`，产物 `vivo OTA Tracker-v1.4.0(12)-debug.apk`。
 - release 开启 `minifyEnabled=true` + `shrinkResources=true`（R8 混淆 + 资源压缩），
   比 debug 慢（约 3-5 分钟）。
 - 构建日志关键任务全跑通：`validateSigningRelease`、`writeReleaseSigningConfigVersions`、
@@ -209,7 +210,7 @@ KEY_PASSWORD=VivoOta@2026
   -keep class com.vivo.seckeysdk.utils.** { *; }
   -dontwarn com.vivo.seckeysdk.**
   ```
-  （`com.mytiantian.updater.**` 本就在 `-keep` 里，无需再补。）
+  （`io.github.long36708.updater.**` 本就在 `-keep` 里，无需再补。）
 - **验证方式**：本机重打 release 包 `BUILD SUCCESSFUL in 3m 35s`，`libvivoseckey.so` 仍正常打包；
   **UI 是否真的不卡需在真机（vivo 设备）实测**（`adb logcat | grep VivoCrypto` 看
   `Native init() => false` / `Using remote crypto server` 进一步定位）。

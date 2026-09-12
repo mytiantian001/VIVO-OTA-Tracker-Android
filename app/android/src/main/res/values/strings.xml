@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">VIVO OTA Tracker</string>
+    <string name="app_name">VIVO OTA Tracker Plus</string>
 
     <!-- Crypto status -->
     <string name="crypto_ready">● Encryption engine ready</string>
@@ -22,8 +22,15 @@
     <!-- Version input -->
     <string name="label_sw_version">System version (e.g. 16.1.16.5.W10)</string>
     <string name="hint_sw_version">The encryption library does not support version retrieval for older devices with x.x.x format</string>
+    <string name="sw_version_optional">Optional version</string>
+    <string name="sw_version_use_recommended">Use recommended</string>
     <string name="custom_version">Custom</string>
     <string name="label_sn">SN serial number (optional)</string>
+    <string name="label_imei">IMEI (optional)</string>
+    <string name="imei_random">Random</string>
+    <string name="imei_use_device">Use device</string>
+    <string name="imei_source_device">Read from this device</string>
+    <string name="imei_source_random">Device IMEI unavailable, random generated</string>
     <string name="label_package_type">Package type</string>
     <string name="pkg_full">Full package</string>
     <string name="pkg_incremental">Incremental</string>
@@ -35,6 +42,11 @@
     <string name="channel_trial">Early Access</string>
     <string name="channel_beta">Public Beta</string>
     <string name="channel_alpha">Closed Beta</string>
+
+    <!-- Query domain -->
+    <string name="label_query_domain">Query domain</string>
+    <string name="domain_cn">CN (国行) · sysupgrade.vivo.com.cn</string>
+    <string name="domain_global">GLOBAL (出口版) · asia-sysupgrade-api.vivoglobal.com</string>
 
     <!-- Query -->
     <string name="btn_query">Query OTA Update</string>
@@ -51,6 +63,10 @@
     <string name="update_date">Update date: %1$s</string>
     <string name="btn_download">Download</string>
     <string name="btn_copy_link">Copy link</string>
+    <string name="btn_open_in_browser">Open in browser</string>
+    <string name="btn_fill">Fill</string>
+    <string name="btn_changelog">Changelog</string>
+    <string name="back">Back</string>
     <string name="btn_copy_version">Copy version</string>
     <string name="btn_copy_changelog">Copy changelog</string>
     <string name="copied">Copied</string>
@@ -99,12 +115,22 @@
     <string name="partition_size">Size: %1$s</string>
     <string name="sha256">SHA256: %1$s</string>
     <string name="extract">Extract</string>
+    <string name="payload_input_hint">Paste OTA payload / zip URL</string>
+    <string name="payload_parse">Parse</string>
+    <string name="payload_clear">Clear</string>
+    <string name="partition_size_ops">Size: %1$s · Ops: %2$d · Merge: %3$d</string>
+    <string name="partition_raw_size">Raw size</string>
+    <string name="partition_ops">Operations</string>
+    <string name="partition_ops_value">%1$d (merge: %2$d)</string>
+    <string name="sha256_full">SHA256</string>
+    <string name="partition_op_types">Operation types</string>
     <string name="payload_security_patch">Security patch</string>
     <string name="payload_build_date">Build date</string>
     <string name="payload_package_type">Package type</string>
     <string name="payload_full">Full</string>
     <string name="payload_incremental">Incremental</string>
     <string name="payload_block_size">Block size</string>
+    <string name="payload_read_traffic">Network read</string>
     <string name="payload_partial_update">Partial update</string>
     <string name="payload_yes">Yes</string>
     <string name="payload_select_all">Select all</string>
@@ -113,5 +139,48 @@
     <string name="payload_extract_success">%1$s extraction complete</string>
     <string name="payload_extract_failed">%1$s extraction failed</string>
     <string name="payload_batch_complete">Batch complete: %1$d success, %2$d failed</string>
+
+    <!-- Zip Entry Browser (ADR-001, L0) -->
+    <string name="zip_package_files">Package files</string>
+    <string name="zip_search_hint">Search file name</string>
+    <string name="zip_preview">Preview</string>
+    <string name="zip_open_zip">Open</string>
+    <string name="zip_back_up">Back</string>
+    <string name="zip_nested_too_deep">Nested archive is too deep (max 3 levels)</string>
+    <string name="zip_no_match">No matching files</string>
+    <string name="zip_no_match_hint">Search covers this archive only; open a nested archive to search inside it</string>
+    <string name="zip_file_count">%1$d files</string>
+    <string name="zip_download">Download</string>
+    <string name="zip_downloading">Downloading…</string>
+    <string name="zip_loading">Loading file list…</string>
+    <string name="zip_preview_not_text">Not plain text, cannot be previewed</string>
+    <string name="zip_load_full">Load full content</string>
+    <string name="zip_copy_all">Copy all</string>
+    <string name="zip_copy_loaded">Copy loaded %1$s</string>
+    <string name="zip_too_large_to_copy">Content too large to copy, please download it</string>
+    <!-- 压缩后 → 解压后 -->
+    <string name="zip_size_format">%1$s → %2$s</string>
+    <string name="zip_truncated_hint">Showing first %1$s of %2$s</string>
+    <string name="zip_encoding">Encoding</string>
+    <string name="zip_crc">CRC32</string>
+    <string name="zip_method">Method</string>
+    <string name="zip_method_stored">Stored</string>
+    <string name="zip_method_deflate">Deflate</string>
+    <string name="zip_too_large">Over 10 MB</string>
+    <string name="zip_unsupported">Unsupported</string>
+    <string name="zip_download_too_large">Exceeds the 10 MB limit — download blocked</string>
+    <string name="zip_download_incomplete">Incomplete data or size mismatch — download aborted</string>
+    <string name="zip_download_success">%1$s saved to Downloads</string>
+    <string name="zip_download_failed">Failed to save %1$s</string>
+    <string name="zip_download_crc_mismatch">%1$s saved, but CRC32 mismatch</string>
+    <string name="zip_err_not_valid_zip">Not a valid zip package</string>
+    <string name="zip_err_bad_local_header">Corrupted entry header</string>
+    <string name="zip_err_bad_deflate">Corrupted compressed data</string>
+    <string name="zip_err_unsupported_method">Unsupported compression method</string>
+    <string name="zip_err_zip64_missing">Entry is missing its ZIP64 extra field</string>
+    <string name="zip_err_range_unsupported">Server does not support Range requests — use another link or download locally</string>
+    <string name="zip_err_range_mismatch">Server returned a different byte range than requested — aborted</string>
+    <string name="zip_err_source_changed">Parsing target changed — reopen the file list</string>
+    <string name="zip_err_generic">Operation failed</string>
     <string name="devices_updated">Device list updated</string>
 </resources>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">VIVO OTA Tracker</string>
+    <string name="app_name">VIVO OTA Tracker Plus</string>
 
     <!-- Crypto status -->
     <string name="crypto_ready">● एन्क्रिप्शन इंजन तैयार</string>
@@ -51,6 +51,10 @@
     <string name="update_date">अपडेट तिथि: %1$s</string>
     <string name="btn_download">डाउनलोड</string>
     <string name="btn_copy_link">लिंक कॉपी करें</string>
+    <string name="btn_open_in_browser">ब्राउज़र में खोलें</string>
+    <string name="btn_fill">भरें</string>
+    <string name="btn_changelog">चेंजलॉग</string>
+    <string name="back">वापस</string>
     <string name="btn_copy_version">संस्करण कॉपी करें</string>
     <string name="btn_copy_changelog">बदलाव लॉग कॉपी करें</string>
     <string name="copied">कॉपी हो गया</string>
@@ -105,6 +109,7 @@
     <string name="payload_full">पूर्ण</string>
     <string name="payload_incremental">वृद्धिशील</string>
     <string name="payload_block_size">ब्लॉक आकार</string>
+    <string name="payload_read_traffic">पढ़ा गया डेटा</string>
     <string name="payload_partial_update">आंशिक अपडेट</string>
     <string name="payload_yes">हाँ</string>
     <string name="payload_select_all">सभी चुनें</string>

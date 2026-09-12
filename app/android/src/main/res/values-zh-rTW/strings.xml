@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">VIVO OTA Tracker</string>
+    <string name="app_name">VIVO OTA Tracker Plus</string>
 
     <!-- Crypto status -->
     <string name="crypto_ready">● 加密引擎就緒</string>
@@ -51,6 +51,10 @@
     <string name="update_date">更新日期: %1$s</string>
     <string name="btn_download">下載</string>
     <string name="btn_copy_link">複製連結</string>
+    <string name="btn_open_in_browser">在瀏覽器開啟</string>
+    <string name="btn_fill">填充</string>
+    <string name="btn_changelog">更新日誌</string>
+    <string name="back">返回</string>
     <string name="btn_copy_version">複製版本號</string>
     <string name="btn_copy_changelog">複製日誌</string>
     <string name="copied">已複製</string>
@@ -105,10 +109,12 @@
     <string name="payload_full">完整套件</string>
     <string name="payload_incremental">增量套件</string>
     <string name="payload_block_size">區塊大小</string>
+    <string name="payload_read_traffic">本次讀取流量</string>
     <string name="payload_partial_update">部分更新</string>
     <string name="payload_yes">是</string>
     <string name="payload_select_all">全選</string>
     <string name="payload_selected_count">已選: %1$d</string>
+    <string name="payload_clear">清空</string>
     <string name="payload_extract_selected">提取選中</string>
     <string name="payload_extract_success">%1$s 提取完成</string>
     <string name="payload_extract_failed">%1$s 提取失敗</string>

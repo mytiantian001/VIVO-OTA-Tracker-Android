@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 用于读取本机 IMEI 作为查询参数的默认值；取不到时会回退为随机值。 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <uses-sdk tools:overrideLibrary="top.yukonga.miuix.kmp.blur" />
 
@@ -17,7 +19,7 @@
         android:theme="@style/Theme.Updater"
         tools:ignore="UnusedAttribute">
         <activity
-            android:name="com.mytiantian.updater.MainActivity"
+            android:name="io.github.long36708.updater.MainActivity"
             android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|mnc|colorMode|density|fontScale|fontWeightAdjustment|keyboard|layoutDirection|locale|mcc|navigation|smallestScreenSize|touchscreen|uiMode"
             android:enableOnBackInvokedCallback="true"
             android:exported="true"

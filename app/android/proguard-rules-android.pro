@@ -9,7 +9,7 @@
 -keepclasseswithmembernames class * {
     native <methods>;
 }
--keep class com.mytiantian.updater.** { *; }
+-keep class io.github.long36708.updater.** { *; }
 
 # Vivo SecKey SDK (libvivoseckey.so JNI engine)
 # 必须原样保留，否则 R8 混淆/裁剪后 SDKCipherNative.init() 失败，

@@ -426,3 +426,20 @@ obj/
 # End of https://www.toptal.com/developers/gitignore/api/java,linux,macos,kotlin,android,windows,composer,jetbrains,androidstudio,visualstudiocode,xcode
 
 .idea
+
+# --- 本地临时调试 / 缓存产物（非仓库内容，不入版本控制） ---
+.zcode/
+__pycache__/
+*.pyc
+
+# 调试探针脚本（会话期间手动调试用，非源码）
+probe_*.py
+_scan_braces.py
+verify_adr003_sw_version.py
+
+# 本地临时构建脚本
+build-debug.bat
+build-release.bat
+
+# 运行日志
+vivo_payload_log.txt

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">VIVO OTA Tracker</string>
+    <string name="app_name">VIVO OTA Tracker Plus</string>
 
     <!-- Crypto status -->
     <string name="crypto_ready">● 加密引擎就绪</string>
@@ -22,8 +22,15 @@
     <!-- Version input -->
     <string name="label_sw_version">系统版本号 (例如: 16.1.16.5.W10)</string>
     <string name="hint_sw_version">加密库不支持早期旧设备的 x.x.x 版本号获取</string>
+    <string name="sw_version_optional">可选版本</string>
+    <string name="sw_version_use_recommended">用推荐版本</string>
     <string name="custom_version">自定义</string>
     <string name="label_sn">SN 序列号 (可选)</string>
+    <string name="label_imei">IMEI 号 (可选)</string>
+    <string name="imei_random">随机生成</string>
+    <string name="imei_use_device">用本机</string>
+    <string name="imei_source_device">已读取本机 IMEI</string>
+    <string name="imei_source_random">本机 IMEI 不可用，已随机生成</string>
     <string name="label_package_type">包类型</string>
     <string name="pkg_full">完整包</string>
     <string name="pkg_incremental">增量包</string>
@@ -51,6 +58,10 @@
     <string name="update_date">更新日期: %1$s</string>
     <string name="btn_download">下载</string>
     <string name="btn_copy_link">复制链接</string>
+    <string name="btn_open_in_browser">在浏览器打开</string>
+    <string name="btn_fill">填充</string>
+    <string name="btn_changelog">更新日志</string>
+    <string name="back">返回</string>
     <string name="btn_copy_version">复制版本号</string>
     <string name="btn_copy_changelog">复制日志</string>
     <string name="copied">已复制</string>
@@ -99,12 +110,22 @@
     <string name="partition_size">大小：%1$s</string>
     <string name="sha256">SHA256：%1$s</string>
     <string name="extract">提取</string>
+    <string name="payload_input_hint">粘贴 OTA payload / zip 链接</string>
+    <string name="payload_parse">解析</string>
+    <string name="payload_clear">清空</string>
+    <string name="partition_size_ops">大小：%1$s · 操作数：%2$d · 合并：%3$d</string>
+    <string name="partition_raw_size">原始大小</string>
+    <string name="partition_ops">操作</string>
+    <string name="partition_ops_value">%1$d（合并：%2$d）</string>
+    <string name="sha256_full">SHA256</string>
+    <string name="partition_op_types">操作类型</string>
     <string name="payload_security_patch">安全补丁</string>
     <string name="payload_build_date">构建日期</string>
     <string name="payload_package_type">包类型</string>
     <string name="payload_full">全量包</string>
     <string name="payload_incremental">增量包</string>
     <string name="payload_block_size">块大小</string>
+    <string name="payload_read_traffic">本次读取流量</string>
     <string name="payload_partial_update">部分更新</string>
     <string name="payload_yes">是</string>
     <string name="payload_select_all">全选</string>
@@ -113,5 +134,48 @@
     <string name="payload_extract_success">%1$s 提取完成</string>
     <string name="payload_extract_failed">%1$s 提取失败</string>
     <string name="payload_batch_complete">批量完成: %1$d 成功, %2$d 失败</string>
+
+    <!-- 包内文件浏览 (ADR-001, L0) -->
+    <string name="zip_package_files">包内文件</string>
+    <string name="zip_search_hint">搜索文件名</string>
+    <string name="zip_preview">预览</string>
+    <string name="zip_open_zip">打开</string>
+    <string name="zip_back_up">返回上层</string>
+    <string name="zip_nested_too_deep">嵌套层级过深（最多 3 层）</string>
+    <string name="zip_no_match">没有匹配的文件</string>
+    <string name="zip_no_match_hint">搜索范围仅限当前包，可打开嵌套包后在其中继续搜索</string>
+    <string name="zip_file_count">%1$d 个文件</string>
+    <string name="zip_download">下载</string>
+    <string name="zip_downloading">下载中…</string>
+    <string name="zip_loading">正在加载文件列表…</string>
+    <string name="zip_preview_not_text">不是纯文本，无法预览</string>
+    <string name="zip_load_full">加载完整内容</string>
+    <string name="zip_copy_all">复制全部</string>
+    <string name="zip_copy_loaded">复制已加载的 %1$s</string>
+    <string name="zip_too_large_to_copy">内容过大无法复制，请下载后查看</string>
+    <!-- 压缩后 → 解压后 -->
+    <string name="zip_size_format">%1$s → %2$s</string>
+    <string name="zip_truncated_hint">显示前 %1$s，共 %2$s</string>
+    <string name="zip_encoding">编码</string>
+    <string name="zip_crc">CRC32</string>
+    <string name="zip_method">方式</string>
+    <string name="zip_method_stored">未压缩</string>
+    <string name="zip_method_deflate">Deflate</string>
+    <string name="zip_too_large">超过 10 MB</string>
+    <string name="zip_unsupported">不支持</string>
+    <string name="zip_download_too_large">超过 10 MB 限制，已禁止下载</string>
+    <string name="zip_download_incomplete">数据不完整或大小不符，已中止下载</string>
+    <string name="zip_download_success">%1$s 已保存到下载目录</string>
+    <string name="zip_download_failed">%1$s 保存失败</string>
+    <string name="zip_download_crc_mismatch">%1$s 已保存，但 CRC32 校验不一致</string>
+    <string name="zip_err_not_valid_zip">不是有效的 zip 包</string>
+    <string name="zip_err_bad_local_header">条目头损坏</string>
+    <string name="zip_err_bad_deflate">压缩数据损坏</string>
+    <string name="zip_err_unsupported_method">不支持的压缩方式</string>
+    <string name="zip_err_zip64_missing">条目缺少 ZIP64 扩展信息，无法定位数据</string>
+    <string name="zip_err_range_unsupported">服务器不支持分段读取，无法在线解析，请更换直链或下载到本地</string>
+    <string name="zip_err_range_mismatch">服务器返回的数据区间与请求不符，已中止</string>
+    <string name="zip_err_source_changed">解析目标已切换，请返回后重新展开文件列表</string>
+    <string name="zip_err_generic">操作失败</string>
     <string name="devices_updated">设备列表已更新</string>
 </resources>

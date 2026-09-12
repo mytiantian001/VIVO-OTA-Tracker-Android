@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">VIVO OTA Tracker</string>
+    <string name="app_name">VIVO OTA Tracker Plus</string>
 
     <!-- Crypto status -->
     <string name="crypto_ready">● 암호화 엔진 준비 완료</string>
@@ -51,6 +51,10 @@
     <string name="update_date">업데이트 날짜: %1$s</string>
     <string name="btn_download">다운로드</string>
     <string name="btn_copy_link">링크 복사</string>
+    <string name="btn_open_in_browser">브라우저에서 열기</string>
+    <string name="btn_fill">채우기</string>
+    <string name="btn_changelog">변경 기록</string>
+    <string name="back">뒤로</string>
     <string name="btn_copy_version">버전 복사</string>
     <string name="btn_copy_changelog">변경 사항 복사</string>
     <string name="copied">복사됨</string>
@@ -105,6 +109,7 @@
     <string name="payload_full">전체</string>
     <string name="payload_incremental">증분</string>
     <string name="payload_block_size">블록 크기</string>
+    <string name="payload_read_traffic">이번 읽기 트래픽</string>
     <string name="payload_partial_update">부분 업데이트</string>
     <string name="payload_yes">예</string>
     <string name="payload_select_all">모두 선택</string>

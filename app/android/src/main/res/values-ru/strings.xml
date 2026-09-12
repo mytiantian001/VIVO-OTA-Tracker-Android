@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">VIVO OTA Tracker</string>
+    <string name="app_name">VIVO OTA Tracker Plus</string>
 
     <!-- Crypto status -->
     <string name="crypto_ready">● Движок шифрования готов</string>
@@ -51,6 +51,10 @@
     <string name="update_date">Дата обновления: %1$s</string>
     <string name="btn_download">Скачать</string>
     <string name="btn_copy_link">Копировать ссылку</string>
+    <string name="btn_open_in_browser">Открыть в браузере</string>
+    <string name="btn_fill">Заполнить</string>
+    <string name="btn_changelog">Журнал изменений</string>
+    <string name="back">Назад</string>
     <string name="btn_copy_version">Копировать версию</string>
     <string name="btn_copy_changelog">Копировать изменения</string>
     <string name="copied">Скопировано</string>
@@ -105,6 +109,7 @@
     <string name="payload_full">Полный</string>
     <string name="payload_incremental">Инкрементальный</string>
     <string name="payload_block_size">Размер блока</string>
+    <string name="payload_read_traffic">Прочитано из сети</string>
     <string name="payload_partial_update">Частичное обновление</string>
     <string name="payload_yes">Да</string>
     <string name="payload_select_all">Выбрать все</string>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">VIVO OTA Tracker</string>
+    <string name="app_name">VIVO OTA Tracker Plus</string>
 
     <!-- Crypto status -->
     <string name="crypto_ready">● Mesin enkripsi siap</string>
@@ -51,6 +51,10 @@
     <string name="update_date">Tanggal pembaruan: %1$s</string>
     <string name="btn_download">Unduh</string>
     <string name="btn_copy_link">Salin tautan</string>
+    <string name="btn_open_in_browser">Buka di browser</string>
+    <string name="btn_fill">Isi</string>
+    <string name="btn_changelog">Changelog</string>
+    <string name="back">Kembali</string>
     <string name="btn_copy_version">Salin versi</string>
     <string name="btn_copy_changelog">Salin catatan perubahan</string>
     <string name="copied">Tersalin</string>
@@ -105,6 +109,7 @@
     <string name="payload_full">Penuh</string>
     <string name="payload_incremental">Inkremental</string>
     <string name="payload_block_size">Ukuran blok</string>
+    <string name="payload_read_traffic">Data yang dibaca</string>
     <string name="payload_partial_update">Pembaruan sebagian</string>
     <string name="payload_yes">Ya</string>
     <string name="payload_select_all">Pilih semua</string>

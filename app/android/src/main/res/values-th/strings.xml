@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">VIVO OTA Tracker</string>
+    <string name="app_name">VIVO OTA Tracker Plus</string>
 
     <!-- Crypto status -->
     <string name="crypto_ready">● ระบบเข้ารหัสพร้อมใช้งาน</string>
@@ -51,6 +51,10 @@
     <string name="update_date">วันที่อัปเดต: %1$s</string>
     <string name="btn_download">ดาวน์โหลด</string>
     <string name="btn_copy_link">คัดลอกลิงก์</string>
+    <string name="btn_open_in_browser">เปิดในเบราว์เซอร์</string>
+    <string name="btn_fill">กรอก</string>
+    <string name="btn_changelog">บันทึกการเปลี่ยนแปลง</string>
+    <string name="back">กลับ</string>
     <string name="btn_copy_version">คัดลอกเวอร์ชัน</string>
     <string name="btn_copy_changelog">คัดลอกบันทึกการเปลี่ยนแปลง</string>
     <string name="copied">คัดลอกแล้ว</string>
@@ -105,6 +109,7 @@
     <string name="payload_full">แบบเต็ม</string>
     <string name="payload_incremental">แบบเพิ่มส่วน</string>
     <string name="payload_block_size">ขนาดบล็อก</string>
+    <string name="payload_read_traffic">ข้อมูลที่อ่าน</string>
     <string name="payload_partial_update">อัปเดตบางส่วน</string>
     <string name="payload_yes">ใช่</string>
     <string name="payload_select_all">เลือกทั้งหมด</string>

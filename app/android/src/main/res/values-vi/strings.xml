@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">VIVO OTA Tracker</string>
+    <string name="app_name">VIVO OTA Tracker Plus</string>
 
     <!-- Crypto status -->
     <string name="crypto_ready">● Công cụ mã hóa đã sẵn sàng</string>
@@ -51,6 +51,10 @@
     <string name="update_date">Ngày cập nhật: %1$s</string>
     <string name="btn_download">Tải xuống</string>
     <string name="btn_copy_link">Sao chép liên kết</string>
+    <string name="btn_open_in_browser">Mở trong trình duyệt</string>
+    <string name="btn_fill">Điền</string>
+    <string name="btn_changelog">Nhật ký thay đổi</string>
+    <string name="back">Quay lại</string>
     <string name="btn_copy_version">Sao chép phiên bản</string>
     <string name="btn_copy_changelog">Sao chép nhật ký</string>
     <string name="copied">Đã sao chép</string>
@@ -105,6 +109,7 @@
     <string name="payload_full">Đầy đủ</string>
     <string name="payload_incremental">Tăng dần</string>
     <string name="payload_block_size">Kích thước khối</string>
+    <string name="payload_read_traffic">Dữ liệu đã đọc</string>
     <string name="payload_partial_update">Cập nhật một phần</string>
     <string name="payload_yes">Có</string>
     <string name="payload_select_all">Chọn tất cả</string>
