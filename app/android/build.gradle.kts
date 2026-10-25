@@ -89,7 +89,7 @@ base {
 
 protobuf {
     protoc {
-        artifact = "com.google.protobuf:protoc:4.30.1"
+        artifact = "com.google.protobuf:protoc:4.36.2"
     }
     generateProtoTasks {
         all().forEach { task ->
